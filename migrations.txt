@@ -1,0 +1,16 @@
+Models
+rails generate model User name:string photo:text bio:text posts_counter:integer
+rails generate model Post title:string text:text comments_counter:integer likes_counter:integer
+rails generate model Comment text:text
+rails generate model Like
+
+Tables
+rails generate migration CreateUsers name:string
+rails generate migration CreateFoods name:string measurement_unit:string price:integer quantity:integer
+rails generate migration CreateRecipes name:string preparation_time:integer cooking_time:integer description:text public:boolean
+
+rails generate migration AddUserRefToFoods user:references
+rails generate migration AddUserRefToRecipes user:references
+
+rails generate migration CreateJoinTableBetweenRecipesFoods
+
