@@ -10,6 +10,8 @@
 # Ignore node_modules creates by linters
 /node_modules/*
 
+/config/database.yml
+
 # Ignore the default SQLite database.
 /db/*.sqlite3
 /db/*.sqlite3-*
