@@ -1,0 +1,27 @@
+<div class="foods-container">
+    <div class="add-food-container">
+        <a href="<%= new_food_path %>">
+         <button class="btn btn-primary">Add Food</button>
+         </a>
+    </div>
+    <div class="foods-list">
+        <table class="table table-striped">
+            <thead>
+                <th>Name</th>
+                <th>Measurement Unit</th>
+                <th>Unit Price</th>
+                <th>Actions</th>
+            </thead>
+            <tbody>
+                <% @foods.each do |food| %>
+                    <tr>
+                        <td><%= food.name %></td>
+                        <td><%= food.measurement_unit %></td>
+                        <td><%= food.price %></td>
+                        <td>Delete</td>
+                    </tr>
+                <% end %>
+            </tbody>
+        </table>
+    </div>
+</div>
