@@ -1,0 +1,25 @@
+<div class="container">
+    <h1>Shopping List</h1>
+    <div class="summary">
+        <p>Amount of food items to buy:<%= missing_foods.count() %></p>
+        <p>Total cost of food items to buy: $<%= missing_foods.sum(:price) %></p>
+    </div>
+    <div class="shopping-list">
+        <table class="table table-striped">
+            <thead>
+                <th>Food</th>
+                <th>Quantity</th>
+                <th>Price</th>
+            </thead>
+            <tbody>
+                <% missing_foods.each do |food| %>
+                    <tr>
+                        <td><%= food.name %></td>
+                        <td><%= food.quantity %> <%= food.measurement_unit %></td>
+                        <td>$ <%= food.price %></td>
+                    </tr>
+                <% end %>
+            </tbody>
+        </table>
+    </div>
+</div>
