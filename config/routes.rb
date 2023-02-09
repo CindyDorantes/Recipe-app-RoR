@@ -7,5 +7,5 @@ Rails.application.routes.draw do
   root 'recipes#index'
   resources :recipes, only: [:index, :new, :create, :show]
   resources :shopping_list, only: [:index]
-  resources :foods, only: [:index, :new, :create, :show]
+  resources :foods, only: [:index, :new, :create, :destroy]
 end
