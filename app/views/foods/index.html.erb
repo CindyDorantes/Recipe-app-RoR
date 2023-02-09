@@ -18,7 +18,11 @@
                         <td><%= food.name %></td>
                         <td><%= food.measurement_unit %></td>
                         <td><%= food.price %></td>
-                        <td>Delete</td>
+                        <td>
+                            <%= form_for(food, method: :delete) do |f| %>
+                                <%= submit_tag "Delete", data: { confirm: "Are you sure?" } %>
+                            <% end %>
+                        </td>
                     </tr>
                 <% end %>
             </tbody>
