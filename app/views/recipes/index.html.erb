@@ -2,18 +2,25 @@
   <h2 class="mb-5">
     Your recipes
   </h2>
+  <%= link_to new_recipe_path do %>
+    <button class="btn btn-primary mb-3">Add Recipe</button>
+  <% end %>
+
   <div>
     <% @recipes.each do |recipe| %>
-    <div class="row border border-dark border-2 rounded align-items-start m-1 p-4">
+    <div class="row border border-dark border-2 rounded align-items-start m-4 p-4">
+
       <div class="col">
         <h4><%= recipe.name %></h4>
         <%= form_for(recipe, method: :delete) do |f| %>
-          <%= submit_tag "REMOVE", data: { confirm: "Are you sure?" } %>
+          <%= submit_tag "Delete", data: { confirm: "Are you sure?" } %>
         <% end %>
       </div>
+
       <div class="col">
        <p><%= recipe.description %></p>
       </div>
+
     </div>
     <% end %>
   </div>
