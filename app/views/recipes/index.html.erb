@@ -1,0 +1,20 @@
+<section class="container text-center">
+  <h2 class="mb-5">
+    Your recipes
+  </h2>
+  <div>
+    <% @recipes.each do |recipe| %>
+    <div class="row border border-dark border-2 rounded align-items-start m-1 p-4">
+      <div class="col">
+        <h4><%= recipe.name %></h4>
+        <%= form_for(recipe, method: :delete) do |f| %>
+          <%= submit_tag "REMOVE", data: { confirm: "Are you sure?" } %>
+        <% end %>
+      </div>
+      <div class="col">
+       <p><%= recipe.description %></p>
+      </div>
+    </div>
+    <% end %>
+  </div>
+</section>
