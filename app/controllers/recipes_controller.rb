@@ -3,6 +3,11 @@ class RecipesController < ApplicationController
     @recipes = Recipe.where(user_id: current_user.id)
   end
 
+  def show
+    @recipe = Recipe.find(params[:id])
+    @recipe_foods = @recipe.recipe_foods.includes([:food])
+  end
+
   def new
     recipe = Recipe.new
     respond_to do |format|
