@@ -14,7 +14,7 @@
       <%# <%= link_to shopping_list_path do %> %>
         <%# <button class="btn btn-primary mb-3">Generate shopping list</button> %>
       <%# <% end %> %>
-      <%= link_to recipe_foods_path do %>
+      <%= link_to new_recipe_recipe_food_path(@recipe.id) do %>
         <button class="btn btn-primary mb-3">Add ingredient</button>
       <% end %>
     <% end %>
@@ -28,7 +28,7 @@
       <th scope="col">Actions</th>
     </tr>
     <% @recipe_foods.each do |recipe_food| %>
-      <%= render partial: "shared/recipe_ingredientes", locals: { recipe_food: recipe_food } %>
+      <%= render partial: "shared/recipe_ingredients", locals: { recipe_food: recipe_food } %>
     <% end %>
   </table>
 
