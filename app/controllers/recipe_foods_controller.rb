@@ -11,7 +11,8 @@ class RecipeFoodsController < ApplicationController
   end
 
   def create
-    new_recipe_food = RecipeFood.new(recipe_id: params[:recipe_id], food_id: params[:recipe_food][:food_id], quantity: params[:recipe_food][:quantity])
+    new_recipe_food = RecipeFood.new(recipe_id: params[:recipe_id], food_id: params[:recipe_food][:food_id],
+                                     quantity: params[:recipe_food][:quantity])
     respond_to do |format|
       format.html do
         if new_recipe_food.save
