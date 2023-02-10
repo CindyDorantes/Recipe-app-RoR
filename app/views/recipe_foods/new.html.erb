@@ -7,6 +7,7 @@
       <% @foods.each do |food| %>
         <%= form.radio_button :food_id, food.id %>
         <%= form.label :food_id, food.name %>
+        <br>
       <% end %>
     </div>
     <div class="form-group mb-3">
