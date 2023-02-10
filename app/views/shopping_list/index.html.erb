@@ -1,8 +1,8 @@
 <div class="container">
     <h1>Shopping List</h1>
     <div class="summary">
-        <p>Amount of food items to buy:<%= missing_foods.count() %></p>
-        <p>Total cost of food items to buy: $<%= missing_foods.sum(:price) %></p>
+        <p>Amount of food items to buy:<%= @combined_foods.count() %></p>
+        <p>Total cost of food items to buy: $<%= @total_price %></p>
     </div>
     <div class="shopping-list">
         <table class="table table-striped">
@@ -12,11 +12,11 @@
                 <th>Price</th>
             </thead>
             <tbody>
-                <% missing_foods.each do |food| %>
+                <% @combined_foods.each do |food| %>
                     <tr>
-                        <td><%= food.name %></td>
-                        <td><%= food.quantity %> <%= food.measurement_unit %></td>
-                        <td>$ <%= food.price %></td>
+                        <td><%= food[:name] %></td>
+                        <td><%= food[:required_quantity] %> <%= food [:measurement_unit] %></td>
+                        <td>$ <%= food[:price] %></td>
                     </tr>
                 <% end %>
             </tbody>
