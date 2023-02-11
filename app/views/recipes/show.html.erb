@@ -9,11 +9,11 @@
     <p>Steps go here...</p>
   </div>
 
-  <div class="container text-start m-5">
+  <div class="container text-start m-5 d-flex justify-content-around px-4">
     <% if @recipe.user_id == current_user.id %>
-      <%# <%= link_to shopping_list_path do %> %>
-        <%# <button class="btn btn-primary mb-3">Generate shopping list</button> %>
-      <%# <% end %> %>
+       <%= link_to shopping_list_path do %>
+         <button class="btn btn-primary mb-3">Generate shopping list</button>
+       <% end %>
       <%= link_to new_recipe_recipe_food_path(@recipe.id) do %>
         <button class="btn btn-primary mb-3">Add ingredient</button>
       <% end %>
