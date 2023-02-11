@@ -2,8 +2,7 @@ require 'rails_helper'
 
 RSpec.describe User, type: :model do
   # tests go here
-  subject { User.create(name: 'Tom') }
-
+  subject { User.new(name: 'Tom', email: 'tom@gmail.com', password: '123abc') }
   before { subject.save }
 
   context 'Test user validations' do
