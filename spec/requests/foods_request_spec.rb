@@ -1,18 +1,14 @@
 require 'rails_helper'
 
 RSpec.describe 'Foods', type: :request do
-  before(:each) do
+  before :each do
     @user = User.create(
-      name: 'Otim'
+      name: 'Microverse',
+      email: 'd@gmail.com',
+      password: 'password'
     )
 
-    @food = Food.create(
-      user: @user,
-      name: 'Fish', 
-      measurement_unit: 'KGs',
-      price: 25000,
-      quantity: 2
-    )
+    @food = Food.create(name: 'orange', price: 12, quantity: 5, measurement_unit: 'pieces', user: @user)
   end
 
   it 'should get index' do
