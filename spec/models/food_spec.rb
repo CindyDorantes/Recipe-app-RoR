@@ -1,40 +1,39 @@
 require 'rails_helper'
 
 RSpec.describe Food, type: :model do
-  # tests go here
-  user = User.create(name: 'Tom')
-  subject { Food.create(name: 'orange', price: 12, quantity: 5, measurement_unit: 'pieces', user:) }
-
-  before { subject.save }
+  subject do
+    User.create(name: 'Tom', email: 'tom@gmail.com', password: '123abc', password_confirmation: '123abc')
+  end
+  before { @food = Food.create(name: 'apple', measurement_unit: 'kg', price: 10, quantity: 10, user: subject) }
 
   context 'Test food validations' do
     it 'is valid with valid attributes' do
-      expect(subject).to be_valid
+      expect(@food).to be_valid
     end
 
     it 'name must not be blank' do
-      subject.name = nil
-      expect(subject).to_not be_valid
+      @food.name = nil
+      expect(@food).to_not be_valid
     end
 
     it 'price must not be blank' do
-      subject.price = nil
-      expect(subject).to_not be_valid
+      @food.price = nil
+      expect(@food).to_not be_valid
     end
 
     it 'price must be and integer' do
-      subject.price = 'foo'
-      expect(subject).to_not be_valid
+      @food.price = 'foo'
+      expect(@food).to_not be_valid
     end
 
     it 'quantity must not be blank' do
-      subject.quantity = nil
-      expect(subject).to_not be_valid
+      @food.quantity = nil
+      expect(@food).to_not be_valid
     end
 
     it 'quantity must be and integer' do
-      subject.quantity = 'foo'
-      expect(subject).to_not be_valid
+      @food.quantity = 'foo'
+      expect(@food).to_not be_valid
     end
   end
 end
