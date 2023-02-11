@@ -2,10 +2,6 @@ require 'rails_helper'
 
 RSpec.describe User, type: :model do
   # tests go here
-<<<<<<< HEAD
-  subject { User.new(name: 'Tom', email: 'tom@gmail.com', password: '123abc') }
-  before { subject.save }
-=======
   before :each do
     @user = User.create(
       name: 'Microverse',
@@ -13,7 +9,6 @@ RSpec.describe User, type: :model do
       password: 'password'
     )
   end
->>>>>>> 423a220 (Rebase current development with integration tests branch)
 
   context 'Test user validations' do
     it 'is valid with valid attributes' do
