@@ -5,8 +5,8 @@ RSpec.describe Recipe, type: :model do
     User.create(name: 'Tom', email: 'tom@gmail.com', password: '123abc', password_confirmation: '123abc')
   end
   before do
-    @recipe = Recipe.create(name: 'Cake', preparation_time: '2 hours', cooking_time: '30 minutes', description: 'deliciouos cake',
-                            public: true, user: subject)
+    @recipe = Recipe.create(name: 'Cake', preparation_time: '2 hours', cooking_time: '30 minutes',
+                            description: 'deliciouos cake', public: true, user: subject)
   end
 
   context 'Test Recipe validations' do
