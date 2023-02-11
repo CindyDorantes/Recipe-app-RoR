@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe Recipe, type: :model do
   # tests go here
-  user = User.create(name: 'Tom')
+  user = User.create(name: 'Tom', email: 'tom@gmail.com')
   subject do
     Recipe.create(name: 'Cake', preparation_time: '2 hours', cooking_time: '30 minutes', description: 'deliciouos cake',
                   user:)
