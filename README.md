@@ -167,15 +167,7 @@ To run tests, run the following command:
 ## 🔭 Future Features <a name="future-features"></a>
 
 >
-
-- [ ] **Login page and registration page built with Devise**
-- [ ] **A food list (with all CRUD implementation, except for 'update')**
-- [ ] **A recipes list (with all CRUD implementation, except for 'update')**
-- [ ] **A general shopping list view (all missing food for all your recipes and total price)**
-- [ ] **A list of all public recipes from other users with their names and total prices**
-- [ ] **Recipe details page allowing owner to add new food:**
-- [ ] **Navigate menu allowing users to open created pages**
-- [ ] **Set up with Rspec and Capybara testing libraries**
+- [ ] **API Endpoints**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
