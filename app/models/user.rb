@@ -7,4 +7,6 @@ class User < ApplicationRecord
   has_many :recipes, foreign_key: 'user_id'
 
   validates :name, presence: true, length: { maximum: 250 }
+  validates :password, presence: true
+  validates :email, presence: true
 end
