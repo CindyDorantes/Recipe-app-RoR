@@ -13,4 +13,10 @@
  *= require_tree .
  *= require_self
  */
+
 @import 'bootstrap';
+
+.nav-link.active {
+  background-color: lightgray;
+  color: black;
+}

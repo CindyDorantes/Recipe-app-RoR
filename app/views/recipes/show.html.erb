@@ -18,7 +18,7 @@
 
   <div class="container text-start mt-3 mb-3">
     <% if @recipe.user_id == current_user.id %>
-      <%= link_to shopping_list_index_path do %>
+      <%= link_to shopping_list_path do %>
         <button class="btn btn-primary me-5">Generate shopping list</button>
       <% end %>
       <%= link_to new_recipe_recipe_food_path(@recipe.id) do %>
