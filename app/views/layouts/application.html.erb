@@ -10,7 +10,10 @@
     <%= javascript_importmap_tags %>
   </head>
 
-  <body>
+  <body px-5>
+    <%= render '/shared/nav' %>
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
     <%= yield %>
   </body>
 </html>

@@ -1,0 +1,25 @@
+<section class="container text-center">
+  <h1 class="mb-5">
+    Public Recipes
+  </h1>
+
+  <div>
+    <% @public_recipes.each do |recipe| %>
+    <div class="row border border-dark border-2 rounded align-items-start m-4 p-4">
+
+      <div class="col">
+        <%= link_to recipe_path(recipe.id) do %>
+          <h4><%= recipe.name %></h4>
+        <% end %>
+        <p>By: <%= recipe.user.name%></p>
+      </div>
+
+      <div class="col">
+       <p>Total food items: <%= recipe.total_food_items %></p>
+       <p>Total price: $<%= recipe.total_price %></p>
+      </div>
+
+    </div>
+    <% end %>
+  </div>
+</section>
