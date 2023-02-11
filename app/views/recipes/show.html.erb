@@ -16,18 +16,18 @@
     <p>Steps go here...</p>
   </div>
 
-  <div class="container text-start m-5">
+  <div class="container text-start mt-3 mb-3">
     <% if @recipe.user_id == current_user.id %>
       <%= link_to shopping_list_index_path do %>
-        <button class="btn btn-primary mb-3">Generate shopping list</button>
+        <button class="btn btn-primary me-5">Generate shopping list</button>
       <% end %>
       <%= link_to new_recipe_recipe_food_path(@recipe.id) do %>
-        <button class="btn btn-primary mb-3">Add ingredient</button>
+        <button class="btn btn-primary">Add ingredient</button>
       <% end %>
     <% end %>
   </div>
 
-  <table class="table table-striped table-hover">
+  <table class="table table-striped table-hover mt-5">
     <tr>
       <th scope="col">Food</th>
       <th scope="col">Quantity</th>
