@@ -16,19 +16,11 @@
     <p>Steps go here...</p>
   </div>
 
-<<<<<<< HEAD
   <div class="container text-start mt-3 mb-3">
     <% if @recipe.user_id == current_user.id %>
       <%= link_to shopping_list_path do %>
         <button class="btn btn-primary me-5">Generate shopping list</button>
       <% end %>
-=======
-  <div class="container text-start m-5 d-flex justify-content-around px-4">
-    <% if @recipe.user_id == current_user.id %>
-       <%= link_to shopping_list_path do %>
-         <button class="btn btn-primary mb-3">Generate shopping list</button>
-       <% end %>
->>>>>>> 657ac1f57c77bca1d52cd6eec1760c7b31fa2159
       <%= link_to new_recipe_recipe_food_path(@recipe.id) do %>
         <button class="btn btn-primary">Add ingredient</button>
       <% end %>
