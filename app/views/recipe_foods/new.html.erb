@@ -5,8 +5,10 @@
       <%= form.label :question, "Select the ingredient you want to add to the recipe" %>
       <br>
       <% @foods.each do |food| %>
+        <div class="form-check form-check-inline d-flex">
         <%= form.radio_button :food_id, food.id %>
         <%= form.label :food_id, food.name %>
+        </div>
       <% end %>
     </div>
     <div class="form-group mb-3">
