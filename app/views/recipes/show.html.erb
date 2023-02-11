@@ -1,10 +1,16 @@
 <section class="container text-center">
-  <h2 class="mb-5">
+  <h1 class="mb-5">
     <%= @recipe.name %>
-  </h2>
+  </h1>
 
   <div class="container text-start">
-    <strong>Public:</strong>
+    <div class="container text-end">This recipe is 
+      <% if @recipe.public %>
+        <p class="one">PUBLIC</p>
+      <% else %>
+        <p class="two">PRIVATE</p>
+      <% end %>
+    </div>
     <p>Preparation time: <%= @recipe.preparation_time %></p>
     <p>Cooking time: <%= @recipe.cooking_time %></p>
     <p>Steps go here...</p>
