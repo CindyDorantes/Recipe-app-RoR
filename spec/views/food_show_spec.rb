@@ -1,18 +1,14 @@
 require 'rails_helper'
 
-RSpec.describe 'Foods index page', type: :feature do
-  before(:each) do
+RSpec.describe 'Foods index page', type: :system do
+  before :each do
     @user = User.create(
-      name: 'Otim'
+      name: 'Microverse',
+      email: 'd@gmail.com',
+      password: 'password'
     )
 
-    @food = Food.create(
-      user: @user,
-      name: 'Fish', 
-      measurement_unit: 'KGs',
-      price: 25000,
-      quantity: 2
-    )
+    @food = Food.create(name: 'orange', price: 12, quantity: 5, measurement_unit: 'pieces', user: @user)
   end
 
   describe 'the foods index page' do

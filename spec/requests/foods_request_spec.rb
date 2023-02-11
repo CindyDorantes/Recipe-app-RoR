@@ -12,7 +12,7 @@ RSpec.describe 'Foods', type: :request do
   end
 
   it 'should get index' do
-    get foods_path
+    visit foods_path
     expect(response).to have_http_status(200)
   end
 

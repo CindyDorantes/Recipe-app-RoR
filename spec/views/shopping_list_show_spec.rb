@@ -3,7 +3,9 @@ require 'rails_helper'
 RSpec.describe 'Post show page', type: :feature do
   before(:each) do
     @user = User.create(
-      name: 'Otim'
+      name: 'Microverse',
+      email: 'd@gmail.com',
+      password: 'password'
     )
 
     @food = Food.create(
@@ -42,6 +44,8 @@ RSpec.describe 'Post show page', type: :feature do
         food: @food2,
         quantity: 5
     )
+
+    sign_in(@user)
   end
 
   describe 'the shopping list page' do
