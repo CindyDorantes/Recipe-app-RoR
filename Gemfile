@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '3.1.2'
+ruby '2.7.1'
 
 # Use bootstrap for styling [https://getbootstrap.com]
 gem 'bootstrap'
