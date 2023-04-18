@@ -12,8 +12,8 @@ default: &default
 development:
   <<: *default
   host: localhost
-  username: postgres
-  password: postgres
+  username: cinmeds
+  password: Doran135.33
   database: recipe_app
   port: 5432
 
@@ -30,4 +30,3 @@ test:
 
 production:
   <<: *default
-  url: <%= ENV['DATABASE_URL'] %>
